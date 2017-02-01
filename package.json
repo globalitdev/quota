@@ -1,0 +1,63 @@
+{
+  "name": "widgets-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run client",
+    "client": "budo client/index.js --open --dir public --serve application.js -- -p browserify-hmr",
+    "server": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "ftw/transforms/fn-jadeify",
+      "ftw/transforms/styles",
+      "ftw/transforms/icons",
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "stage-0"
+          ],
+          "plugins": [
+            "transform-class-properties",
+            "transform-decorators-legacy",
+            "class-name"
+          ],
+          "extensions": [
+            ".js",
+            ".jade"
+          ]
+        }
+      ],
+      "envify"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-class-name": "github:zeddidragon/babel-plugin-class-name#a25cb60",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2017-node7": "^0.4.1",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.2.0",
+    "budo": "^9.3.0",
+    "envify": "^3.4.1",
+    "ftw": "git+ssh://git@bitbucket.org/globalit/fanteam-widgets.git#fantwo",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "dependencies": {
+    "browserify-hmr": "^0.3.5",
+    "express-jwt": "^5.1.0",
+    "morgan": "^1.7.0",
+    "pathfinder-ui": "^1.0.3",
+    "socket.io": "^1.7.2",
+    "spdy": "^3.4.4"
+  }
+}

@@ -1,0 +1,22 @@
+@import "ftw/mixins/variables"
+@import "ftw/mixins/responsive"
+
+:host
+  display: flex
+
+.header
+  flex: 1
+  display: flex
+  justify-content: space-between
+
+
+.user
+  display: flex
+  align-items: center
+
+  .name
+    font-weight: bold
+    padding: 0 $padding
+
+  img
+    max-height: 2em

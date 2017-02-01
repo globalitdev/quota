@@ -1,0 +1,10 @@
+style= require('./header.component.sass')
+
+.header
+  unless user
+    ft-button(accent, (click)=this.login())= t('login')
+  else
+    .user
+      img(src=user.picture)
+      .name= user.nickname
+    ft-button((click)=this.logout())= t('logout')
