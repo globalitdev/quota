@@ -1,7 +1,6 @@
 const CLIENT_ID = process.env.AUTH0_CLIENT_ID
 const DOMAIN = process.env.AUTH0_DOMAIN
 
-
 export const auth = new Auth0Lock(CLIENT_ID, DOMAIN);
 
 class Auth {

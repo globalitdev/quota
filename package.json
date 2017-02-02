@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run client",
+    "start": "node start.js --open --dir public --serve application.js -- -p browserify-hmr",
     "client": "budo client/index.js --open --dir public --serve application.js -- -p browserify-hmr",
     "server": "babel-node server/index.js"
   },
