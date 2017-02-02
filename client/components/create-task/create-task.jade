@@ -1,0 +1,13 @@
+style= require('./create-task.sass')
+.create-task
+  h1 Create task
+    span= this.task.title
+  .row
+    .label Task title
+    ft-form-control([(value)]=this.task.title)
+  .row
+    .label
+  .row
+    .label Description
+    ft-form-control([(value)]=this.task.description)
+  ft-button((click)=this.save()) Save
