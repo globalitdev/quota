@@ -1,0 +1,7 @@
+style= require('./task-list.sass')
+.task-list
+  if tasks
+    each task in tasks
+      h1= task.title
+      p= task.description
+      hr
