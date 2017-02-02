@@ -1,4 +1,5 @@
  /* +MODELS */
+ models.User = require('./user')
  /* -MODELS */
 
 function models(name) {
