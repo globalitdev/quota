@@ -9,18 +9,18 @@ import models from '../models'
 export default {
   before(app) {
     const config = app.get('config')
-
+    // register models
+    app.use(models(config.database))
     app.use(routes)
 
     // authenticate
-    app.use(jwt(config.auth))
+    //app.use(jwt(config.auth))
 
     // parse body
     app.use(body.urlencoded({ extended: false }))
     app.use(body.json())
 
-    // register models
-    app.use(models(config.database))
+
 
   },
   after(app) {

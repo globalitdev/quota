@@ -7,7 +7,7 @@ function models(name) {
 
 export default config => {
   return (req, res, next) => {
-    req.models = models
+    req.model = models
     next()
   }
 }

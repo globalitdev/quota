@@ -7,7 +7,7 @@ import Sockets from 'socket.io'
 import config from './config'
 import middleware from './middleware'
 import routes from './routes'
-
+import db from './init/db'
 
 const app = express()
 const server = config.ssl
