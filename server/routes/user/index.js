@@ -12,6 +12,4 @@ const index = (req, res, next) => {
 module.exports = require('express').Router()
   .get('/', index)
   .get('/:id', require('./read'))
-  .post('/', require('./create'))
-  .put('/:id', require('./update'))
   .delete('/:id', require('./delete'))
