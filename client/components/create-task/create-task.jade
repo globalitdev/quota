@@ -6,17 +6,8 @@ style= require('./create-task.sass')
     .label Task title
     ft-form-control([(value)]=this.task.title)
   .row
-    .label 
+    .label
   .row
     .label Description
     ft-form-control([(value)]=this.task.description)
-  .row
-    .label Status
-    ft-select(
-      placeholder="No status selected",
-      type="text",
-      name="",
-      [(value)]=this.task.status
-    )
-      each status in statuses
-        option(value=status._id)= status.title
+  ft-button((click)=this.save()) Save

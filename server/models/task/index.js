@@ -17,6 +17,10 @@ var Task = new Schema({
     type: ObjectId,
     ref: 'Tag'
   },
+  priority: {
+    type: String,
+    enum: ['low', 'medium', 'high', 'critical']
+  },
   tags: [{
     type: ObjectId,
     ref: 'Tag'
