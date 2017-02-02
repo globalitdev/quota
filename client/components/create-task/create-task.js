@@ -1,7 +1,8 @@
 import {Template, Component} from 'ftw/lib'
 import template from './create-task.jade'
-import {Task} from '../../models/Task'
-import {Tag} from '../../models/Tag'
+import {Task} from '../../models/task'
+import {Tag} from '../../models/tag'
+
 import 'ftw/components/form-control/form-control'
 import 'ftw/components/select/select'
 

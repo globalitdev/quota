@@ -7,6 +7,7 @@ style= require('./kanban.component.sass')
       each task in groups[group]
         .card
           header
+            .department= task.department
             .priority= task.priority
             
           h3= task.title

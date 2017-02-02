@@ -21,6 +21,10 @@ var Task = new Schema({
     type: String,
     enum: ['low', 'medium', 'high', 'critical']
   },
+  department: {
+    type: String,
+    enum: [ 'development', 'frontend', 'design', 'qa', 'operation' ]
+  },
   tags: [{
     type: ObjectId,
     ref: 'Tag'
