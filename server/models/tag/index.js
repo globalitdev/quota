@@ -7,7 +7,7 @@ var Tag = new Schema({
   // Fill in schema here
   category: {
     type: String,
-    enum: ['other', 'project', 'type','status']
+    enum: ['other', 'project', 'type', 'status']
   },
   title: {
     type: String,

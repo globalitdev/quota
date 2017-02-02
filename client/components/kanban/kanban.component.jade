@@ -1,2 +1,23 @@
 style= require('./kanban.component.sass')
 .kanban
+  each group in groups && window.Object.keys(groups)
+    .lane
+      - var tag = (tags[group] || [])[0] || {}
+      h2(style={color: tag.color})= tag.title || 'Unknown'
+      each task in groups[group]
+        .card
+          header
+            .department= task.department
+            .priority= task.priority
+          section
+            h3= task.title
+            p= task.description
+            .tags
+              each tag in task.tags
+                .tag({color: tag.color})
+                  = tag.title
+          footer
+            .assignees
+              each assignee in task.assignees
+                .assignee
+                  .name= assignee.name

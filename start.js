@@ -5,5 +5,6 @@ var budo = require('budo')
 budo('./client/index.js',{
   serve: 'application.js',
   dir: __dirname + '/public',
-  stream: process.stdout
+  stream: process.stdout,
+  live: true
 })

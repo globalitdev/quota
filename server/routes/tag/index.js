@@ -1,8 +1,8 @@
 
 const index = (req, res, next) => {
-  req.model('Tag').find()
+  req.model('Tag').find(req.body)
     .then(data=> {
-      res.json(data)
+      res.json({tags: data})
     }).catch(err=> {
       console.log(err)
     })
