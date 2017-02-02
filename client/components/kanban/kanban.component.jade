@@ -3,9 +3,12 @@ style= require('./kanban.component.sass')
   each group in groups && window.Object.keys(groups)
     .lane
       - var tag = (tags[group] || [])[0] || {}
-      - log(tag)
-      h3(style={color: tag.color})= t(tag.title)
+      h2(style={color: tag.color})= tag.title || 'Unknown'
       each task in groups[group]
         .card
-          h4= task.title
+          header
+            .priority= task.priority
+            
+          h3= task.title
           p= task.description
+      

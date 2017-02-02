@@ -1,9 +1,19 @@
+@import "ftw/mixins/variables"
+
 :host
   display: flex
+  background-color: $secondary-color-hue
+  color: $secondary-text-hue
 
 .kanban
   display: flex
+  width: 100%
 
   .lane
     flex: 1
-  
+    padding: $padding
+
+  .card
+    background-color: $secondary-color
+    color: $secondary-text
+    padding: $padding
