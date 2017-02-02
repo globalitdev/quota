@@ -11,14 +11,17 @@ export default {
     const config = app.get('config')
     // register models
     app.use(models(config.database))
+
+    // parse body
+    app.use(body.urlencoded({ extended: false }))
+    app.use(body.json())
+
     app.use(routes)
 
     // authenticate
     //app.use(jwt(config.auth))
 
-    // parse body
-    app.use(body.urlencoded({ extended: false }))
-    app.use(body.json())
+
 
 
 
