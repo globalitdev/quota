@@ -1,0 +1,22 @@
+style= require('./create-task.sass')
+.create-task
+  h1 Create task
+    span= this.task.title
+  .row
+    .label Task title
+    ft-form-control([(value)]=this.task.title)
+  .row
+    .label 
+  .row
+    .label Description
+    ft-form-control([(value)]=this.task.description)
+  .row
+    .label Status
+    ft-select(
+      placeholder="No status selected",
+      type="text",
+      name="",
+      [(value)]=this.task.status
+    )
+      each status in statuses
+        option(value=status._id)= status.title
