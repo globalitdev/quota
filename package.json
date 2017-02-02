@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run client",
     "client": "budo client/index.js --open --dir public --serve application.js -- -p browserify-hmr",
-    "server": "node server/index.js"
+    "server": "babel-node server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "babel-cli": "^6.22.2",
     "babel-plugin-class-name": "github:zeddidragon/babel-plugin-class-name#a25cb60",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -54,6 +55,7 @@
   },
   "dependencies": {
     "browserify-hmr": "^0.3.5",
+    "config-node": "^1.3.0",
     "express-jwt": "^5.1.0",
     "morgan": "^1.7.0",
     "pathfinder-ui": "^1.0.3",
