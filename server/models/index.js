@@ -1,5 +1,6 @@
  /* +MODELS */
  models.User = require('./user')
+ models.Task = require('./task')
  /* -MODELS */
 
 function models(name) {
