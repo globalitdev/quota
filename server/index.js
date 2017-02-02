@@ -2,6 +2,7 @@ import spdy from 'spdy'
 import http from 'http'
 
 import express from 'express'
+import cors from 'cors'
 import Sockets from 'socket.io'
 
 import config from './config'
@@ -15,7 +16,7 @@ const server = config.ssl
   : http.createServer(app)
 
 const sockets = Sockets(server)
-
+app.use(cors())
 app.configure = cb => cb(app) || app
 
 app.set('config', config)
