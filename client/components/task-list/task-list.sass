@@ -1,1 +1,10 @@
-.task-list
+@import 'ftw/mixins/variables.sass'
+
+:host
+  display: flex
+  background-color: $secondary-color-hue
+  .task-list
+    width: 100%
+    ft-task-item
+      margin: 10px
+      background-color: $primary-text

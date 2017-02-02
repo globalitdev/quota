@@ -1,0 +1,42 @@
+style= require('./task-item.component.sass')
+.task-item
+  .general-information
+    .name
+      h3
+        = task.title
+    .description= task.description
+    .tags
+      if task.tags.length > 1
+        each tag in task.tags
+          .item=tag
+      else
+        .tag=task.tags[0] || 'random_data'
+  .additional-information
+    .views
+      .count
+        = task.views || 7
+      .icon
+        ft-icon(name="ui--visibility")
+    .task-types
+      .item
+        = task.type || ''
+        ft-icon(name="ui--wildcard")
+    .assignees
+      if task.assignees.length > 1
+        each assignee in task.assignees
+          .assignee-wrapper
+            .item-name=assignee
+            .img
+              img(src=assignee.image, alt="")
+      else
+        .assignee-wrapper
+          .item-name=task.assignees[0] || 'unique_user'
+          .img
+            img
+    .department
+      .item
+        = task.department || 'design'
+    .priority
+      .item
+        = task.priority || 'high priority'
+  
