@@ -1,5 +1,5 @@
  /* +MODELS */
- /* -ROUTES */
+ /* -MODELS */
 
 function models(name) {
   return models[name] || (models[name] = function Model() {})
