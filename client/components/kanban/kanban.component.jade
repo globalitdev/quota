@@ -9,7 +9,15 @@ style= require('./kanban.component.sass')
           header
             .department= task.department
             .priority= task.priority
-            
-          h3= task.title
-          p= task.description
-      
+          section
+            h3= task.title
+            p= task.description
+            .tags
+              each tag in task.tags
+                .tag({color: tag.color})
+                  = tag.title
+          footer
+            .assignees
+              each assignee in task.assignees
+                .assignee
+                  .name= assignee.name
